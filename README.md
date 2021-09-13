@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://github.com/MAwaisRafiq/Testimonial-Grid-CSS
-- Live Site URL: https://mawaisrafiq.github.io/Testimonial-Grid-CSS/
+- Solution URL: https://github.com/MAwaisRafiq/PROJECT
+- Live Site URL: https://mawaisrafiq.github.io/PROJECT/
 
 ## My process
 
