@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+body {
+  background-color: #c5e4e7;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Space Mono", monospace;
+  position: relative;
+}
+
+body > header {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  width: 90px;
+  margin-bottom: 88px;
+  line-height: 2;
+}
+
+body > header::before {
+  content: 'S p l i';
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+  color: #00494d;
+}
+
+body > header::after {
+  content: 't t e r';
+  position: absolute;
+  top: 0;
+  margin: auto;
+  color: #00494d;
+}
+
+body .attribution {
+  position: absolute;
+  bottom: 0%;
+}
+
+.card {
+  background-color: white;
+  border-radius: 25px;
+}
+
+@media (min-width: 948px) {
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 840px;
+    height: 420px;
+    padding: 34px;
+    gap: 34px;
+  }
+}
+
+@media (max-width: 948px) {
+  .card {
+    display: block;
+    width: 350px;
+    height: 700px;
+    padding: 15px;
+  }
+}
+
+.card .card__child1,
+.card .card__child2 {
+  border-radius: 15px;
+}
+
+@media (min-width: 948px) {
+  .card .card__child1,
+  .card .card__child2 {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+@media (min-width: 948px) {
+  .card .card__child1 {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.card .card__child1 .label {
+  margin-bottom: 22px;
+  font-weight: 500;
+  position: relative;
+}
+
+.card .card__child1 .label .error_handling {
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  color: red;
+}
+
+.card .card__child1 .label .hide {
+  display: none;
+}
+
+.card .card__child1 .buttons {
+  display: -ms-grid;
+  display: grid;
+}
+
+.card .card__child1 .buttons .percent {
+  border: none;
+  position: relative;
+  border-radius: 10px;
+  background-color: #00494d;
+  font-family: "Space Mono", monospace;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  width: 120px;
+  height: 50px;
+  margin-bottom: 16px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 948px) {
+  .card .card__child1 .buttons .percent {
+    width: 95px;
+    height: 50px;
+    margin-bottom: 16px;
+    margin-left: 8px;
+  }
+}
+
+.card .card__child1 .buttons .percent:hover {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+.card .card__child1 .buttons .percent.selected {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+.card .card__child1 .buttons .percent:last-child:hover {
+  background-color: #00494d;
+}
+
+.card .card__child1 .buttons .percent:last-child:hover #custom_label {
+  color: #26c0ab;
+}
+
+.card .card__child1 .buttons .percent .hide {
+  display: none;
+}
+
+.card .card__child1 .buttons .percent #custom_percent {
+  height: inherit;
+  width: 90%;
+  border: none;
+  background-color: #f4fafa;
+  color: #00494d;
+  font-family: "Space Mono", monospace;
+  font-size: 18px;
+  direction: rtl;
+  padding-right: 10px;
+}
+
+.card .card__child1 .buttons .percent #custom_percent:focus {
+  outline: 2px solid #00494d;
+}
+
+.card .card__child1 .buttons .percent #custom_percent[type="number"]::-webkit-outer-spin-button, .card .card__child1 .buttons .percent #custom_percent[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.card .card__child1 .buttons .percent #custom_percent[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.card .card__child1 .buttons .percent:first-child,
+.card .card__child1 .buttons .percent:nth-child(4) {
+  margin-left: 0px;
+}
+
+.card .card__child1 .buttons .percent:nth-child(1),
+.card .card__child1 .buttons .percent:nth-child(2),
+.card .card__child1 .buttons .percent:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.card .card__child1 .buttons .percent:nth-child(4),
+.card .card__child1 .buttons .percent:nth-child(5),
+.card .card__child1 .buttons .percent:nth-child(6) {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.card .card__child1 .buttons .percent:last-child {
+  background-color: #f4fafa;
+  color: #00494d;
+  font-weight: 600;
+}
+
+.card .card__child1 .input_form {
+  height: 45px;
+  position: relative;
+}
+
+.card .card__child1 .input_form .symbol {
+  position: absolute;
+  z-index: 2;
+  height: inherit;
+  margin: 15px;
+}
+
+.card .card__child1 .input_form input {
+  position: absolute;
+  width: 97%;
+  height: inherit;
+  border: none;
+  z-index: 1;
+  background-color: #f4fafa;
+  color: #00494d;
+  font-family: "Space Mono", monospace;
+  font-size: 18px;
+  direction: rtl;
+  padding-right: 10px;
+}
+
+.card .card__child1 .input_form input:focus {
+  outline: 2px solid #00494d;
+}
+
+.card .card__child1 .input_form input[type="number"]::-webkit-outer-spin-button, .card .card__child1 .input_form input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.card .card__child1 .input_form input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.card .card__child1 .input_form_error_outline {
+  outline: 2px solid red;
+}
+
+.card .card__child2 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  background-color: #00494d;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media (max-width: 948px) {
+  .card .card__child2 {
+    height: 270px;
+    margin-top: 25px;
+  }
+}
+
+.card .card__child2 .stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 330px;
+  height: 42px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.card .card__child2 .stats .stats_profile > :first-child {
+  font-size: 16px;
+}
+
+.card .card__child2 .stats .stats_profile > :last-child {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.card .card__child2 .stats .stats_amount {
+  position: absolute;
+  font-size: 42px;
+  font-weight: 600;
+  right: 0px;
+  color: #26c0ab;
+}
+
+.card .card__child2 .reset {
+  text-transform: uppercase;
+  font-family: "Space Mono", monospace;
+  font-size: 18px;
+  padding: 10px;
+  font-weight: 600;
+  border-radius: 5%;
+  border: none;
+  background-color: #26c0ab;
+  color: #00494d;
+  opacity: 0.25;
+  cursor: pointer;
+}
+
+.card .card__child2 .reset:hover {
+  opacity: 1;
+}
+/*# sourceMappingURL=main.css.map */

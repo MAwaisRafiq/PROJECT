@@ -1,0 +1,338 @@
+@import 'helper/variables';
+@import 'helper/mediaQueries';
+
+
+body{
+
+    
+
+    background-color: $clr-Light-grayish-cyan1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-family;
+    position: relative;
+
+    & > header{
+        position: relative;
+        text-transform: uppercase;
+        font-weight: $fw-600;
+        font-size: 20px;
+        width: 90px;
+        margin-bottom: 88px;
+        line-height: 2;
+    }
+    & > header::before{
+        content:'S p l i';
+        position: absolute;
+        bottom: 0;
+        margin: auto;
+        color: $clr-Very-dark-cyan;
+    }
+    & > header::after{
+        content:'t t e r';
+        position: absolute;
+        top: 0;
+        margin: auto;
+        color: $clr-Very-dark-cyan;
+    }
+    .attribution{
+        position: absolute;
+        bottom: 0%;
+    }
+}
+
+.card{
+
+
+    @include mq(desktop)
+    {
+        display: flex;
+        width: 840px;
+        height: 420px;
+        padding: 34px;
+        gap: 34px;
+    }
+    @include mq(mobile)
+    {
+        display: block;
+        width: 350px;
+        height: 700px;
+        padding: 15px;
+        
+    }
+   
+    background-color: $clr-White;
+    border-radius: 25px;
+    
+    
+    #{&}__child1,
+    #{&}__child2{
+        @include mq(desktop){
+            flex-basis: 100%;
+        }
+       
+        border-radius: 15px;        
+    }
+
+    #{&}__child1{
+
+        @include mq(desktop){
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .label{
+            margin-bottom: 22px;
+            font-weight: $fw-500;
+            position: relative;
+
+            
+
+            .error_handling{
+                position: absolute;
+                right: 0%;
+                top: 0%;
+                color: red
+                
+            }
+
+            .hide{
+                display: none;
+            }
+
+        }
+        .buttons{
+            display: grid;
+            
+            .percent{
+                border: none;
+                position: relative;
+                border-radius: 10px;
+                background-color: $clr-Very-dark-cyan;
+                font-family: $font-family;
+                color: $clr-White;
+                font-size: 22px;
+                font-weight: $fw-600;
+                width: 120px;
+                height: 50px;
+                margin-bottom: 16px;      
+                margin-left: 8px;
+                cursor: pointer;
+               
+                @include mq(mobile){
+                    width: 95px;
+                    height: 50px;
+                    margin-bottom: 16px;      
+                    margin-left: 8px;
+                }
+
+                &:hover{
+                    background-color: $clr-Strong-cyan;
+                    color: $clr-Very-dark-cyan;
+                   
+                    
+                }
+
+                &.selected{
+                    background-color: $clr-Strong-cyan;
+                    color: $clr-Very-dark-cyan;
+
+                }
+
+                &:last-child:hover{
+                    background-color: $clr-Very-dark-cyan;
+                    #custom_label{
+                        
+                        color: $clr-Strong-cyan;
+                        
+                    }
+                }
+                .hide{
+                    display: none;
+                }
+                
+                #custom_percent{
+                    height: inherit;
+                    width: 90%;
+                    border: none;
+                    background-color: $clr-Light-grayish-cyan2;
+                    color: $clr-Very-dark-cyan;
+                    font-family: $font-family;
+                    font-size: 18px;
+                    direction: rtl;
+                    padding-right: 10px;
+
+                    &:focus{
+                        outline: 2px solid $clr-Very-dark-cyan;   
+                    }
+
+                    
+
+                    &[type="number"]::-webkit-outer-spin-button,
+                    &[type="number"]::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+                    &[type="number"]
+                    {
+                        -moz-appearance: textfield;
+                    }
+                    
+                }
+            }
+            
+            .percent:first-child,
+            .percent:nth-child(4)
+            {
+                margin-left: 0px;
+            }
+
+            .percent:nth-child(1),
+            .percent:nth-child(2),
+            .percent:nth-child(3)
+            {
+                grid-row: 1/2;
+                
+            }
+            .percent:nth-child(4),
+            .percent:nth-child(5),
+            .percent:nth-child(6)
+            {
+                grid-row: 2/3;
+            }
+
+            .percent:last-child {
+                background-color: $clr-Light-grayish-cyan2;
+                color: $clr-Very-dark-cyan;
+                font-weight: $fw-600;
+            
+            }
+        }
+
+        .input_form{
+            height: 45px;
+            position: relative;
+            
+            .symbol{
+                position: absolute;
+                z-index: 2;
+                height: inherit;
+                margin: 15px;
+            }
+            
+            input{
+                position: absolute;
+                width: 97%;
+                height: inherit;
+                border: none;
+                z-index: 1;
+                background-color: $clr-Light-grayish-cyan2;
+                color: $clr-Very-dark-cyan;
+                font-family: $font-family;
+                font-size: 18px;
+                direction: rtl;
+                padding-right: 10px;
+
+                &:focus{
+                    outline: 2px solid $clr-Very-dark-cyan;   
+                }
+
+                
+
+                &[type="number"]::-webkit-outer-spin-button,
+                &[type="number"]::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+                &[type="number"]
+                {
+                    -moz-appearance: textfield;
+                }
+            }
+
+            &_error_outline{
+                outline: 2px solid red;  
+            }
+        }
+
+        
+    }
+
+
+
+
+    #{&}__child2{
+        grid-column: 2 / 3;
+        background-color: $clr-Very-dark-cyan;
+        color: $clr-White;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: $fw-400;
+        @include mq(mobile){
+            height: 270px;
+            margin-top: 25px;
+        }
+
+        .stats{
+            display: flex;
+            width: 330px;
+            height: 42px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+            position: relative;
+        
+            .stats_profile > :first-child {
+                font-size: 16px;
+            }
+
+
+            .stats_profile > :last-child {
+                font-size: 12px;
+                opacity: 0.5;
+            }
+
+            .stats_amount{
+                position: absolute;
+                font-size: 42px;
+                font-weight: $fw-600;
+                right: 0px;
+                color: $clr-Strong-cyan;
+            }
+
+        }
+
+        .reset{
+            text-transform: uppercase;
+            font-family: $font-family;
+            font-size: 18px;
+            padding: 10px;
+            font-weight: $fw-600;
+            border-radius: 5%;
+            border: none;
+            background-color: $clr-Strong-cyan;
+            color: $clr-Very-dark-cyan;
+            opacity: 0.25;
+            cursor: pointer;
+
+            &:hover{
+                
+                opacity: 1;
+            }
+        }
+
+
+
+    }
+
+
+    
+}
+
+
